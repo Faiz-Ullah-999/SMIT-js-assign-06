@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet">
+    <title>Js Array Tasks</title>
+  </head>
+  <body
+    class="bg-gray-100 p-6">
+    <div class="max-w-full mx-auto grid gap-6 sm:grid-cols-2">
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <h1 class="text-xl font-bold text-gray-800 mb-4">👨‍🎓 Student
+          Names</h1>
+        <div id="lists"
+          class="mb-4 font-mono p-3 bg-gray-50 rounded flex flex-wrap gap-4"></div>
+        <button onclick="pushMethod()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">➕
+          Add More Name</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result1" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="poparray()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">🗑️
+          POP Last Item</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result2" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="UnshiftArr()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">⏮️
+          Unshift (Add to Start)</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result3" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="shiftArr()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Shift</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result4" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="subArr()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Splice
+          Insert</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result5" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="spliceArr()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Splice
+          Remove</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result6" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="sliceArr()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Slice</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result7" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="splitArr()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Split</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result8" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="joinArr()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Join</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result9" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="arrayConcat()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Concat</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result10" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="SortArray()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Sort
+          Numbers</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result11" class="mb-4 font-mono p-3 bg-gray-50 rounded"></div>
+        <button onclick="SortNames()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Sort
+          Name</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result13" class="mb-4 font-mono p-3 bg-gray-50 rounded">[10,
+          20, 30, 40, 50]</div>
+        <button onclick="ReverseArray()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Reverse
+          Numbers</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result14" class="mb-4 font-mono p-3 bg-gray-50 rounded">["Red",
+          "Green", "Blue", "Yellow"]</div>
+        <button onclick="FindBlueIndex()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Find
+          "Blue" Index</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result15"
+          class="mb-4 font-mono p-3 bg-gray-50 rounded">[]</div>
+        <button onclick="AddItems()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Add
+          3 Items</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result16" class="mb-4 font-mono p-3 bg-gray-50 rounded">[1, 2,
+          3, 4, 5]</div>
+        <button onclick="RemoveMiddleItem()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Remove
+          Middle Item</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result17"
+          class="mb-4 font-mono p-3 bg-gray-50 rounded">"HTML CSS JavaScript"</div>
+        <button onclick="ConvertStringToArray()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Convert
+          to Array</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result18" class="mb-4 font-mono p-3 bg-gray-50 rounded">['a',
+          'b', 'c']</div>
+        <button onclick="ReverseAndJoin()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Reverse
+          & Join</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result19"
+          class="mb-4 font-mono p-3 bg-gray-50 rounded">["Lahore", "Islamabad",
+          "Karachi", "Quetta"]</div>
+        <button onclick="FindKarachi()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Find
+          Karachi</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6">
+        <div id="result20" class="mb-4 font-mono p-3 bg-gray-50 rounded">[2, 4,
+          6] + [1, 3, 5]</div>
+        <button onclick="ConcatAndReverse()"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">Concat
+          & Reverse</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
